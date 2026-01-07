@@ -6,7 +6,7 @@ data={
     "performance_score":[10,7,8,2,5,3,7,5]
 }
 df=pd.DataFrame(data)
-print(df)
+# print(df)
 # name=df['Name']
 # print(name) # single column return series
 # df2=df[["Name","Age"]]

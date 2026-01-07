@@ -1,7 +1,7 @@
 # head() ,tail()
 #head(n) shows first n rows by default n=5; same for last;
 import pandas as pd
-df=pd.read_json("sample_Data.json")
+df=pd.read_json("1.Basics/sample_Data.json")
 
 print("Display first 10 rows.")
 print(df.head(10))
