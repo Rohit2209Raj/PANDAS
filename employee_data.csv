@@ -1,0 +1,16 @@
+emp_id,name,dept,salary,join_date
+101,Amit Sharma,IT,65000,12-06-2019
+102,Neha Verma,HR,48000,25-03-2021
+103,Rahul Singh,Finance,72000,02-11-2018
+104,Priya Mehta,IT,83000,18-09-2017
+105,Arjun Patel,Marketing,55000,10-01-2020
+106,Kavya Iyer,HR,,19-07-2022
+107,Rohit Kumar,Finance,61000,05-12-2019
+108,Simran Kaur,IT,45000,30-05-2021
+109,Manish Gupta,Marketing,39000,14-08-2020
+110,Anjali Rao,Finance,,22-04-2016
+111,Vikas Malhotra,IT,92000,11-02-2015
+112,Pooja Nair,HR,51000,27-06-2018
+113,Sachin Joshi,Marketing,60000,09-10-2019
+114,Ritu Saxena,Finance,58000,01-11-2020
+115,Deepak Yadav,IT,70000,15-01-2022
