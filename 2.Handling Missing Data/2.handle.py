@@ -9,7 +9,7 @@ data={
 df=pd.DataFrame(data)
 print(df)
 # df.dropna(axis=0,inplace=True)
-df.dropna(axis=1,inplace=True)
+df.dropna(axis=0,inplace=True)
 print(df)
-#axis =1 means drop row's null value
-# axis =0 means colums'n null value
+#axis =0 means drop row's null value
+# axis =1 means colums'n null value
