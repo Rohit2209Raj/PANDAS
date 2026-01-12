@@ -128,10 +128,36 @@ print(sorted(df['dept'].unique()))
 # 2. Extract year, month, day 
 # 3. Convert salary to integer
 
-print(df.head())
+# print(df.head())
 
-print(df['join_date'].dtype)
-print(df.head())
+# # df['join_date']=df['join_date'].astype('datetime64[ns]')
+# df['join_date'] = pd.to_datetime(df['join_date'], format='%d-%m-%Y') #interview reccomended
+# # print(df['salary'].mean())
+# df['salary'].fillna(df['salary'].mean(),inplace=True)
+# print(df['salary'])
+# df['salary']=df['salary'].astype('int')
+# print(df.head())
+
+'''
+# Convert join_date to datetime
+df['join_date'] = pd.to_datetime(df['join_date'], format='%d-%m-%Y')
+
+# Extract year, month, day
+df['join_year'] = df['join_date'].dt.year
+df['join_month'] = df['join_date'].dt.month
+df['join_day'] = df['join_date'].dt.day
+
+# Convert salary to integer (safe)
+df['salary'] = df['salary'].fillna(df['salary'].median()).astype(int)
+
+
+'''
+
+
+
+
+
+
 
 
 
