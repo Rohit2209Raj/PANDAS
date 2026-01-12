@@ -1,6 +1,7 @@
 import pandas as pd
 df = pd.read_csv(r"D:\COLLEGE\PANDAS\QUESTIONS PRACTISE\employee_data.csv")
 
+
 # Q1. Data Loading & Inspection 
 # Given employees.csv: 
 # emp_id name dept salary join_date 
