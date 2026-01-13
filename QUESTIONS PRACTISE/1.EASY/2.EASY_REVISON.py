@@ -2,7 +2,7 @@ import pandas as pd
 # df = pd.read_csv(r"D:\COLLEGE\PANDAS\QUESTIONS PRACTISE\employee_data.csv")
 # df['salary']=df['salary'].fillna(df['salary'].mean()).astype("int")
 
-# # rename dept -> department
+# #rename dept -> department
 # df.rename(columns={'dept':'department'},inplace=True)
 
 
@@ -42,6 +42,7 @@ import pandas as pd
 
 df2= pd.read_csv(r"D:\COLLEGE\PANDAS\QUESTIONS PRACTISE\employee_data.csv")
 # print(df2)
+df2.rename(columns={'dept':'department'},inplace=True)
 df2=df2.drop(columns=['join_date'])
 # print(df2)
 
@@ -54,4 +55,12 @@ df2['salary']=df2['salary'].fillna(df2['salary'].mean())
 
 df2=df2.ffill()
 print(df2)
+
+# print Count employees per department
+print(df2['department'].value_counts())
+
+# print number of unique departmen
+print(df2['department'].nunique())
+
+
 
