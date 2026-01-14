@@ -51,11 +51,19 @@ df['salary_band'] = pd.cut(
 # df.loc[df['department'] == 'IT', 'salary'] *= 1.10
 # print(df)
 # apply() method
-print(df)
-df['salary']=df.apply(lambda row : row['salary'] * 1.10 
-                      if row['department']=='IT' else row['salary']
-                       ,axis=1)
-print(df)
+# print(df)
+# df['salary']=df.apply(lambda row : row['salary'] * 1.10 
+#                       if row['department']=='IT' else row['salary']
+#                        ,axis=1)
+# print(df)
+
+
+# if multiple departemtns were needed
+# df['salary'] = df.apply(
+#     lambda row: row['salary'] * 1.10
+#     if row['department'] in ['IT'] else row['salary'],
+#     axis=1
+# )
 
 
 # Q10. GroupBy Aggregations 
@@ -65,6 +73,20 @@ print(df)
 # 3. Employee count 
 # 4. Total payroll 
 
+# print(df.groupby(by='department')['salary'].mean())
+# print(df.groupby(by='department')['salary'].max())
+# print(df['department'].value_counts())
+# print(df.groupby(by='department')['salary'].sum())
+
+
+# result = df.groupby('department').agg(
+#     mean_salary=('salary', 'mean'),
+#     max_salary=('salary', 'max'),
+#     employee_count=('salary', 'count'),
+#     total_payroll=('salary', 'sum')
+# )
+# print(result)
+
 
 
 
@@ -73,6 +95,9 @@ print(df)
 # o avg salary > 60,000 
 # 2. Find departments having more than 10 employees 
 
+df_dapertment_salary_mean=(df.groupby(by='department')['salary'].mean()>60000)
+# df_dapertment_=(df['department'].value_count)
+print(df[[df_dapertment_salary_mean]])
 
 
 
