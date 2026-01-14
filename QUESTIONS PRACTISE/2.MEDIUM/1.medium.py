@@ -43,7 +43,8 @@ df['salary_band'] = pd.cut(
 # 3. Compare performance (conceptual)
 
 print(df)
-
+df2=df[df['department'].isin(['IT'])]
+print(df2)
 
 
 # Q10. GroupBy Aggregations 
