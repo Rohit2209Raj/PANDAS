@@ -95,18 +95,34 @@ df['salary_band'] = pd.cut(
 # o avg salary > 60,000 
 # 2. Find departments having more than 10 employees 
 
-df_dapertment_salary_mean=(df.groupby(by='department')['salary'].mean()>60000)
-# df_dapertment_=(df['department'].value_count)
-print(df[[df_dapertment_salary_mean]])
+# df_dapertment_salary_mean=(df.groupby(by='department')['salary'].mean()>60000)
+# # df_dapertment_=(df['department'].value_count)
+# print(df_dapertment_salary_mean)
+df_department_salary_gt60k=df.groupby(by='department')['salary'].mean()
+df_department_salary_gt60k=df_department_salary_gt60k[df_department_salary_gt60k > 60000]
+# print(df_department_salary_gt60k)
+
+df_employee_count=df['department'].value_counts()
+df_employee_count=df_employee_count[df_employee_count > 3]
+print(df_employee_count)
 
 
 
-# Q12. Multi-Aggregation 
-# Use agg() to compute: 
-# • min salary 
-# • max salary 
-# • std deviation 
-# per department 
+# # Q12. Multi-Aggregation 
+# # Use agg() to compute: 
+# # • min salary 
+# # • max salary 
+# # • std deviation 
+# # per department 
+
+# result = df.groupby('department').agg(
+#     max_salary=('salary', 'max'),
+#     min_salary=('salary', 'min'),
+#     std_deviation=('salary','std')
+#     # employee_count=('salary', 'count'),
+#     # total_payroll=('salary', 'sum')
+# )
+# print(result)
 
 
 
@@ -116,6 +132,7 @@ print(df[[df_dapertment_salary_mean]])
 # 2. Convert to lowercase 
 # 3. Check which emails belong to gmail.com 
 # 4. Replace domain with company.com 
+
 
 
 
