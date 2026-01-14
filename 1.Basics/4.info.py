@@ -7,4 +7,5 @@ data={
     "city":['agra','rohtak','mumbai']
 }
 df=pd.DataFrame(data)
-print(df.info())
+# print(df.info())
+df.info()

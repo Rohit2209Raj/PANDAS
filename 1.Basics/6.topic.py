@@ -11,6 +11,7 @@ data={
     "birthday":[13,22,23,5,7,19,4,16]
 }
 df=pd.DataFrame(data)
-print(df)
+# print(df)
 print(f'Shapes: {df.shape}')
 print(f'Columns Names: {df.columns}')
+print(f'Memory_usage: {df.memory_usage()}')
