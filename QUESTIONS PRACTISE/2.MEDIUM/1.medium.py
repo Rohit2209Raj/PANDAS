@@ -42,9 +42,20 @@ df['salary_band'] = pd.cut(
 # o once using apply 
 # 3. Compare performance (conceptual)
 
+# print(df)
+# df[df['department'].isin(['IT'])]['salary']=df[df['department'].isin(['IT'])]['salary']*1.10
+# print(df)
+
+# best method
+# print(df)
+# df.loc[df['department'] == 'IT', 'salary'] *= 1.10
+# print(df)
+# apply() method
 print(df)
-df2=df[df['department'].isin(['IT'])]
-print(df2)
+df['salary']=df.apply(lambda row : row['salary'] * 1.10 
+                      if row['department']=='IT' else row['salary']
+                       ,axis=1)
+print(df)
 
 
 # Q10. GroupBy Aggregations 
