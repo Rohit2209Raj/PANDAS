@@ -10,7 +10,8 @@ df=pd.DataFrame(data)
 print(df)
 #  not effective method
 # df.fillna(0,inplace=True)
-
+meanx=df['Age'].nanmean()
+print(meanx)
 df['Age'].fillna(df['Age'].mean(),inplace=True)
 df['performance_score'].fillna(df['performance_score'].mean(),inplace=True)
-print(df)
+# print(df)
