@@ -12,6 +12,6 @@ data={
 }
 df=pd.DataFrame(data)
 # print(df)
-print(f'Shapes: {df.shape}')
+print(f'Shapes: {df.shape}') #attribute
 print(f'Columns Names: {df.columns}')
-print(f'Memory_usage: {df.memory_usage()}')
+print(f'Memory_usage: {df.memory_usage()}') #function/method
