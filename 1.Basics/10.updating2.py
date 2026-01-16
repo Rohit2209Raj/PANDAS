@@ -13,7 +13,8 @@ df["Age"]=df["Age"]+1
 # df[df['performance_score']>6]=df['performance_score']+100
 # ValueError: Must have equal len keys and value when setting with an iterable
 # Correct method
-df.loc[df['performance_score'] > 6, 'performance_score'] += 100
+# df.loc[df['performance_score'] > 6, 'performance_score'] += 100
 
+df.loc[df['performance_score']>6, ['Age']] +=5
 
 print(df)

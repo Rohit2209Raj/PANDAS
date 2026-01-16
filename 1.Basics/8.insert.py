@@ -12,7 +12,9 @@ df["Bonus"]=df['performance_score'] * 2500
 
 # USING INSERT METHOD
 # df.insert(loc,"Col_name","data")
+# df.insert()
 df.insert(1,"Surname",['raj','dev','bhardwaj','dev','singh','singh','singh','singh'])
+df.insert(3,'Age_mutliplier',df['Age']*8)
 print(df)
 
 
