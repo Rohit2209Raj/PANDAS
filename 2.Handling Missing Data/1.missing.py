@@ -7,4 +7,5 @@ data={
 }
 df=pd.DataFrame(data)
 # print(df.isnull()) Return True(null) and false(Not null)
+print(df.isnull())
 print(df.isnull().sum())
