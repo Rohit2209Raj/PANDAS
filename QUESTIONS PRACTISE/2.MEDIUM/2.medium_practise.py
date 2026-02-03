@@ -119,20 +119,36 @@ o avg salary > 60,000
 # print(df)
 
 
-'''
-Q15. Duplicate Handling 
-1. Detect duplicate employees 
-2. Remove duplicates keeping latest entry 
-3. Reset index after removal 
-'''
-# display names
-print(df[df.duplicated(subset='name',keep=False)])
+# '''
+# Q15. Duplicate Handling 
+# 1. Detect duplicate employees 
+# 2. Remove duplicates keeping latest entry 
+# 3. Reset index after removal 
+# '''
+# # display names
+# print(df[df.duplicated(subset='name',keep=False)])
 
-# drop duplicates
-df=df.drop_duplicates(subset='name',keep='last')
-print(df)
+# # drop duplicates
+# df=df.drop_duplicates(subset='name',keep='last')
+# print(df)
 
-df = df.reset_index(drop=True)
+# df = df.reset_index(drop=True)
+
+
+'''
+Q16. Data Validation 
+1. Check if any salary is negative 
+2. Assert no duplicate emp_id 
+3. Validate salary column is numeric 
+
+'''
+if (df['salary'] < 0).any():
+    print("There are negative salaries!")
+else:
+    print("No negative salaries.")
+
+
+
 
 
 
